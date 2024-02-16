@@ -1,0 +1,56 @@
+:root {
+    --skyBlue: rgba(70, 178, 252);
+    --pumpkin: rgb(247, 114, 5);
+    --blueShadow: rgba(0, 217, 255, 0.664);
+    --text-shadow: 4px 3px 2px var(--blueShadow);
+    --goldLine: underline 5px solid gold;
+    --pumpkinLine: underline 5px solid var(--pumpkin);
+}
+
+body {
+    background: var(--skyBlue);
+    background: radial-gradient(circle, var(--skyBlue) 0%, black 100%);
+    font-family: "Nabla", sans-serif;
+}
+
+/* <uniquifier>: Use a uniquifier for the class name
+<weight>: Use a value from 4 to 1000
+<roundness>: Use a value from 0 to 100
+<vertical element alignment>: Use a value from -100 to 100 */
+
+.wavefont-test {
+    color: var(--skyBlue);
+    font-family: "Wavefont", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings:
+        "ROND" 100,
+        "YELA" 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    text-align: end;
+}
+
+.goldLine {
+    text-decoration: var(--goldLine);
+    position: relative;
+    text-decoration-skip-ink: auto;
+}
+
+.pumpkinLine {
+    text-decoration: var(--pumpkinLine);
+    text-decoration-skip-ink: auto;
+    position: relative;
+    top: 4px;
+    text-shadow: var(--text-shadow);
+}
+
+p {
+    text-align: start;
+}
