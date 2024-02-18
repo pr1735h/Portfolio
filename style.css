@@ -1,22 +1,22 @@
 :root {
     --skyBlue: rgba(70, 178, 252);
     --pumpkin: rgb(247, 114, 5);
-    --blueShadow: rgba(0, 217, 255, 0.664);
-    --text-shadow: 4px 3px 2px var(--blueShadow);
-    --goldLine: underline 5px solid gold;
-    --pumpkinLine: underline 5px solid var(--pumpkin);
+    --blueShadow: rgba(85, 229, 255, 0.664);
+    --backDrop: rgba(255, 255, 255, 0);
+    --backDrop1: rgba(70, 179, 252, 0.068);
+    --backDrop2: rgba(70, 179, 252, 0.322);
+    --backDrop3: rgba(0, 217, 255, 0.425);
+    --text-shadow: 2px 2px 4px var(--blueShadow);
+    --underLine: underline 5px solid;
+    --goldLine: var(--underLine) gold;
+    --pumpkinLine: var(--underLine) var(--pumpkin);
 }
 
 body {
     background: var(--skyBlue);
     background: radial-gradient(circle, var(--skyBlue) 0%, black 100%);
-    font-family: "Nabla", sans-serif;
+    font-family: "Nabla", system-ui;
 }
-
-/* <uniquifier>: Use a uniquifier for the class name
-<weight>: Use a value from 4 to 1000
-<roundness>: Use a value from 0 to 100
-<vertical element alignment>: Use a value from -100 to 100 */
 
 .wavefont-test {
     color: var(--skyBlue);
@@ -30,11 +30,20 @@ body {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 7vw;
 }
 
 h2 {
     text-align: end;
+    font-size: 4vw;
+}
+
+#h2Left {
+    text-align: start;
+}
+
+.hLink {
+    text-decoration: none;
 }
 
 .goldLine {
@@ -53,4 +62,49 @@ h2 {
 
 p {
     text-align: start;
+    word-wrap: break-word;
+    font-size: 2vw;
+    text-wrap: balance;
+}
+
+#randWavy {
+    text-align: end;
+    font-size: 2vw;
+}
+
+.notes {
+    background: var(--backDrop1);
+    background: linear-gradient(90deg, var(--backDrop), var(--backDrop1)40%, var(--backDrop2)60%, var(--backDrop3)100%);
+}
+
+/* <weight>: Use a value from 400 to 700 */
+#explain {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    text-shadow: var(--text-shadow);
+    text-decoration: underline solid 2px;
+    text-decoration-skip-ink: auto;
+}
+
+#explain2 {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    text-shadow: var(--text-shadow);
+    text-decoration: underline solid 2px;
+    text-decoration-skip-ink: auto;
+    text-align: end;
+}
+
+.iFrames {
+    width: 50vw;
+    height: 100%;
+    border: 1;
+}
+
+div.row:last-child iframe {
+    height: 80%;
 }
