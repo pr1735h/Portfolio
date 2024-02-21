@@ -77,6 +77,11 @@ p {
     background: linear-gradient(90deg, var(--backDrop), var(--backDrop1)40%, var(--backDrop2)60%, var(--backDrop3)100%);
 }
 
+.notes2 {
+    background: var(--backDrop1);
+    background: linear-gradient(90deg, var(--backDrop3), var(--backDrop2)40%, var(--backDrop1)60%, var(--backDrop)100%);
+}
+
 /* <weight>: Use a value from 400 to 700 */
 #explain {
     font-family: "Caveat", cursive;
