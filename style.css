@@ -2,11 +2,12 @@
     --skyBlue: rgba(70, 178, 252);
     --pumpkin: rgb(247, 114, 5);
     --blueShadow: rgba(85, 229, 255, 0.664);
-    --backDrop: rgba(255, 255, 255, 0);
-    --backDrop1: rgba(70, 179, 252, 0.068);
-    --backDrop2: rgba(70, 179, 252, 0.322);
-    --backDrop3: rgba(0, 217, 255, 0.425);
+    --backDrop1: rgba(255, 255, 255, 0);
+    --backDrop2: rgba(70, 179, 252, 0.068);
+    --blue1: rgba(70, 179, 252, 0.322);
+    --blue2: rgba(0, 217, 255, 0.425);
     --text-shadow: 2px 2px 4px var(--blueShadow);
+    --text-shadow2: 2px 2px 4px var(--blueShadow), 3px 3px 4px var(--skyBlue);
     --underLine: underline 5px solid;
     --goldLine: var(--underLine) gold;
     --pumpkinLine: var(--underLine) var(--pumpkin);
@@ -14,8 +15,9 @@
 
 body {
     background: var(--skyBlue);
-    background: radial-gradient(circle, var(--skyBlue) 0%, black 100%);
+    background: radial-gradient(circle, var(--skyBlue) 0%, rgb(41, 40, 40) 100%);
     font-family: "Nabla", system-ui;
+    background-repeat: round;
 }
 
 .wavefont-test {
@@ -29,87 +31,178 @@ body {
         "YELA" 0;
 }
 
-h1 {
-    font-size: 7vw;
+/* Media query for screens in landscape mode */
+@media screen and (orientation: landscape) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    h2 {
+        text-align: end;
+        font-size: 3.2vw;
+    }
+
+    #h2Left {
+        text-align: start;
+    }
+
+    h3 {
+        font-size: 2.5vw;
+    }
+
+    .h3Right {
+        text-align: end;
+    }
+
+    .hLink {
+        text-decoration: none;
+    }
+
+    .goldLine {
+        text-decoration: var(--goldLine);
+        position: relative;
+        text-decoration-skip-ink: auto;
+    }
+
+    .pumpkinLine {
+        text-decoration: var(--pumpkinLine);
+        text-decoration-skip-ink: auto;
+        position: relative;
+        top: 4px;
+        text-shadow: var(--text-shadow);
+    }
+
+    .projectImage {
+        width: 40vw;
+        height: 40vh;
+        border: 5px solid var(--blue1);
+        border-radius: 20px;
+        margin: 1vh;
+    }
+
+    .projectImage:hover {
+        width: 50vw;
+        height: 50vh;
+        border: 5px solid var(--blueShadow);
+        border-radius: 20px;
+        margin: 1vh;
+    }
+
+    p {
+        text-align: start;
+        word-wrap: break-word;
+        font-size: 1.2vw;
+        text-wrap: balance;
+        font-family: "Caveat", cursive;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        text-shadow: var(--text-shadow);
+        text-decoration: underline solid 2px;
+        text-decoration-skip-ink: auto;
+    }
+
+    p:hover {
+        text-shadow: var(--text-shadow2);
+        background: var(--backDrop2);
+        font-size: 1.5vw;
+    }
+
+    #randWavy {
+        text-align: end;
+        font-size: 1.5vw;
+    }
+
+    .explain2 {
+        text-align: end;
+    }
 }
 
-h2 {
-    text-align: end;
-    font-size: 4vw;
-}
+/* Media query for screens in portrait mode */
+@media screen and (orientation: portrait) {
 
-#h2Left {
-    text-align: start;
-}
+    h1 {
+        font-size: 7vh;
+    }
 
-.hLink {
-    text-decoration: none;
-}
+    h2 {
+        text-align: end;
+        font-size: 5vh;
+    }
 
-.goldLine {
-    text-decoration: var(--goldLine);
-    position: relative;
-    text-decoration-skip-ink: auto;
-}
+    #h2Left {
+        text-align: start;
+    }
 
-.pumpkinLine {
-    text-decoration: var(--pumpkinLine);
-    text-decoration-skip-ink: auto;
-    position: relative;
-    top: 4px;
-    text-shadow: var(--text-shadow);
-}
+    h3 {
+        font-size: 2.5vh;
+    }
 
-p {
-    text-align: start;
-    word-wrap: break-word;
-    font-size: 2vw;
-    text-wrap: balance;
-}
+    .h3Right {
+        text-align: end;
+    }
 
-#randWavy {
-    text-align: end;
-    font-size: 2vw;
-}
+    .hLink {
+        text-decoration: none;
+    }
 
-.notes {
-    background: var(--backDrop1);
-    background: linear-gradient(90deg, var(--backDrop), var(--backDrop1)40%, var(--backDrop2)60%, var(--backDrop3)100%);
-}
+    .goldLine {
+        text-decoration: var(--goldLine);
+        position: relative;
+        text-decoration-skip-ink: auto;
+    }
 
-.notes2 {
-    background: var(--backDrop1);
-    background: linear-gradient(90deg, var(--backDrop3), var(--backDrop2)40%, var(--backDrop1)60%, var(--backDrop)100%);
-}
+    .pumpkinLine {
+        text-decoration: var(--pumpkinLine);
+        text-decoration-skip-ink: auto;
+        position: relative;
+        top: 4px;
+        text-shadow: var(--text-shadow);
+    }
 
-/* <weight>: Use a value from 400 to 700 */
-#explain {
-    font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    text-shadow: var(--text-shadow);
-    text-decoration: underline solid 2px;
-    text-decoration-skip-ink: auto;
-}
+    .projectImage {
+        width: 45vw;
+        height: 25vh;
+        border: 5px solid var(--blue1);
+        border-radius: 20px;
+        margin: 1vh;
+    }
 
-#explain2 {
-    font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    text-shadow: var(--text-shadow);
-    text-decoration: underline solid 2px;
-    text-decoration-skip-ink: auto;
-    text-align: end;
-}
+    .projectImage:hover {
+        width: 60vw;
+        height: 35vh;
+        border: 5px solid var(--blueShadow);
+        border-radius: 20px;
+        margin: 1vh;
+    }
 
-.iFrames {
-    width: 50vw;
-    height: 100%;
-    border: 1;
-}
+    p {
+        text-align: start;
+        word-wrap: break-word;
+        font-size: 1.2vh;
+        text-wrap: balance;
+        font-family: "Caveat", cursive;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        text-shadow: var(--text-shadow);
+        text-decoration: underline solid 2px;
+        text-decoration-skip-ink: auto;
+    }
 
-div.row:last-child iframe {
-    height: 80%;
+    p:hover {
+        text-shadow: var(--text-shadow2);
+        background: var(--backDrop2);
+        font-size: 1.5vh;
+    }
+
+    #randWavy {
+        text-align: end;
+        font-size: 1.5vh;
+    }
+
+    .explain2 {
+        text-align: end;
+    }
+
 }

@@ -71,12 +71,3 @@ function updateParagraph() {
 
 // Set a timer that runs the function every 500 milliseconds
 setInterval(updateParagraph, 500);
-
-
-
-
-
-
-
-
-// Mobile picture troll????
