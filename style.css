@@ -1,6 +1,5 @@
 :root {
     --skyBlue: rgba(70, 178, 252);
-    --pumpkin: rgb(247, 114, 5);
     --blueShadow: rgba(85, 229, 255, 0.664);
     --backDrop1: rgba(255, 255, 255, 0);
     --backDrop2: rgba(70, 179, 252, 0.068);
@@ -8,20 +7,20 @@
     --blue2: rgba(0, 217, 255, 0.425);
     --text-shadow: 2px 2px 4px var(--blueShadow);
     --text-shadow2: 2px 2px 4px var(--blueShadow), 3px 3px 4px var(--skyBlue);
-    --underLine: underline 5px solid;
-    --goldLine: var(--underLine) gold;
-    --pumpkinLine: var(--underLine) var(--pumpkin);
+    --underLine: underline 4px solid;
+    --firstLine: var(--underLine) var(--skyBlue);
+    --secondLine: var(--underLine) var(--blue2);
 }
 
 body {
     background: var(--skyBlue);
     background: radial-gradient(circle, var(--skyBlue) 0%, rgb(41, 40, 40) 100%);
-    font-family: "Nabla", system-ui;
+    font-family: "anta", system-ui;
     background-repeat: round;
+    text-shadow: var(--text-shadow2);
 }
 
 .wavefont-test {
-    color: var(--skyBlue);
     font-family: "Wavefont", system-ui;
     font-optical-sizing: auto;
     font-weight: 900;
@@ -58,14 +57,14 @@ body {
         text-decoration: none;
     }
 
-    .goldLine {
-        text-decoration: var(--goldLine);
+    .firstLine {
+        text-decoration: var(--firstLine);
         position: relative;
         text-decoration-skip-ink: auto;
     }
 
-    .pumpkinLine {
-        text-decoration: var(--pumpkinLine);
+    .secondLine {
+        text-decoration: var(--secondLine);
         text-decoration-skip-ink: auto;
         position: relative;
         top: 4px;
@@ -75,7 +74,7 @@ body {
     .projectImage {
         width: 40vw;
         height: 40vh;
-        border: 5px solid var(--blue1);
+        border: 5px solid var(--blue2);
         border-radius: 20px;
         margin: 1vh;
     }
@@ -83,9 +82,10 @@ body {
     .projectImage:hover {
         width: 50vw;
         height: 50vh;
-        border: 5px solid var(--blueShadow);
+        border: 5px solid var(--blue1);
         border-radius: 20px;
         margin: 1vh;
+        transition: all 0.8s ease-in-out;
     }
 
     p {
@@ -93,12 +93,12 @@ body {
         word-wrap: break-word;
         font-size: 1.2vw;
         text-wrap: balance;
-        font-family: "Caveat", cursive;
+        font-family: "open sans", cursive;
         font-optical-sizing: auto;
         font-weight: 700;
         font-style: normal;
-        text-shadow: var(--text-shadow);
-        text-decoration: underline solid 2px;
+        text-shadow: var(--textshadow);
+        text-decoration: var(--secondLine);
         text-decoration-skip-ink: auto;
     }
 
@@ -106,6 +106,7 @@ body {
         text-shadow: var(--text-shadow2);
         background: var(--backDrop2);
         font-size: 1.5vw;
+        transition: all 0.3s ease-in-out;
     }
 
     #randWavy {
@@ -116,18 +117,25 @@ body {
     .explain2 {
         text-align: end;
     }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
 }
 
 /* Media query for screens in portrait mode */
 @media screen and (orientation: portrait) {
 
     h1 {
-        font-size: 7vh;
+        font-size: 6vh;
     }
 
     h2 {
         text-align: end;
-        font-size: 5vh;
+        font-size: 4vh;
     }
 
     #h2Left {
@@ -146,14 +154,14 @@ body {
         text-decoration: none;
     }
 
-    .goldLine {
-        text-decoration: var(--goldLine);
+    .firstLine {
+        text-decoration: var(--firstLine);
         position: relative;
         text-decoration-skip-ink: auto;
     }
 
-    .pumpkinLine {
-        text-decoration: var(--pumpkinLine);
+    .secondLine {
+        text-decoration: var(--secondLine);
         text-decoration-skip-ink: auto;
         position: relative;
         top: 4px;
@@ -161,9 +169,9 @@ body {
     }
 
     .projectImage {
-        width: 45vw;
+        width: 50vw;
         height: 25vh;
-        border: 5px solid var(--blue1);
+        border: 5px solid var(--blue2);
         border-radius: 20px;
         margin: 1vh;
     }
@@ -181,12 +189,12 @@ body {
         word-wrap: break-word;
         font-size: 1.2vh;
         text-wrap: balance;
-        font-family: "Caveat", cursive;
+        font-family: "open sans", cursive;
         font-optical-sizing: auto;
-        font-weight: 700;
+        font-weight: 550;
         font-style: normal;
         text-shadow: var(--text-shadow);
-        text-decoration: underline solid 2px;
+        text-decoration: var(--secondLine);
         text-decoration-skip-ink: auto;
     }
 
