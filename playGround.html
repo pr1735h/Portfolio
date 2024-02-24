@@ -6,10 +6,12 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet"> <!-- Anta -->
     <link href="https://fonts.googleapis.com/css2?family=Wavefont:wght,ROND,YELA@4..1000,0..100,-100..100&display=swap"
+        rel="stylesheet"> <!-- Wavefont -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <!-- Open Sans -->
     <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,13 +43,13 @@
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="projects.html">Projects</a>
+                            <a class="nav-link" href="playGround.html">Code Playground</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://github.com/pr1735h" target="_blank">GitHub</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html#secSection">About Me</a>
+                            <a class="nav-link" href="#secSection">Projects</a>
                         </li>
                     </ul>
                 </div>
@@ -66,56 +68,54 @@
         <section>
             <div class="container-xxl">
                 <div class="row row-cols-2">
-                    <div class="col-4">
-                        <p class="explain2">Project 3:
-                            <br>It is an application that provides a user friendly way to perform CRUD functions.
-                            I created the various functions and saved them in different files such as (connect.py).
-                            connect.py defines how to connect to the database.
-                            I used Python, and MySQL to make this database and application.
-                        </p>
+                    <div class="col-6">
+                        <h2 class="firstLine"><span class="secondLine">Welcome to my portfolio website!</span></h2>
                     </div>
-                    <div class="col"><a href="https://replit.com/@pr1735h/JustIT-PyProject?v=1#main.py"
-                            target="_blank"><img id="projectImg" class="projectImage" src="images\replitProject.jpg"
-                                alt="Replit Project"></a></div>
-                </div>
-                <div class="row row-cols-2">
-                    <div class="col-4">
-                        <p class="explain2">Project 2:
-                            <br>Choose between Easy or Hard mode, type a number between 1-100 to try and guess the
-                            randomly generated number within the set amount of guesses!
-                            I used HTML, CSS and Javascript in this project.
-                        </p>
-                    </div>
-                    <div class="col"><a href="https://pr1735h.github.io/Justitbootcamp/Project2/" target="_blank"><img
-                                id="projectImg" class="projectImage" src="images/numberGuess.jpg"
-                                alt="Number Guess"></a></div>
-                </div>
-                <div class="row row-cols-2">
-                    <div class="col-4">
-                        <p class="explain2">Project 1:
-                            <br>It's like Where's Wally, but you have to find Bigfoot!
-                            Bigfoot is placed on a random part of the window.
-                            If you need help finding him, click on the Hint button.
-                            But that resets the score to 0!
-                            In this project I used HTML, CSS and Javascript.
-                        </p>
-                    </div>
-                    <div class="col"><a href="https://pr1735h.github.io/Justitbootcamp/Project1/" target="_blank"><img
-                                id="projectImg" class="projectImage" src="images/bigFoot.jpg" alt="Big foot game"></a>
+                    <div class="col-6">
+                        <p>I use this space to show off my
+                            skills and explain
+                            my thought process. I found that weird wavy font <a
+                                href="https://fonts.google.com/specimen/Wavefont" target="_blank">(Wavefont)</a> on
+                            google fonts. It looks
+                            like an equalizer to me so I wrote some JavaScript functions. The first one declares a
+                            variable with a list of all digits, upper and lowercase letters, then it looks at the
+                            length of the original text and randomly reassigns each character with a character from
+                            the list. Another function changes the values of the "YELA" attribute of the font. Both
+                            functions use math.random and are called every 0.5 seconds</p>
                     </div>
                 </div>
-                <div class="row row-cols-2">
-                    <div class="col-4">
-                        <p class="explain2">Website 1:
-                            <br>This is the first website I created during the JustIT Bootcamp.
-                            <br>I used HTML, CSS and JavaScript to make this.
+                <div class="row row-cols-2" id="waves">
+
+                    <div class="col">
+                        <p id="randWavy"><span class="wavefont-test">Lorem ipsum, dolor
+                                sit
+                                amet consectetur adipisicing elit. Ipsa quisquam natus esse accusamus pariatur, debitis
+                                adipisci a officiis, nulla perspiciatis reprehenderit aspernatur vero ab. Repellendus
+                                optio incidunt assumenda odit nostrum.Lorem ipsum, dolor sit
+                                amet consectetur adipisicing elit. Ipsa quisquam natus esse accusamus pariatur, debitis
+                                adipisci a officiis, nulla perspiciatis reprehenderit aspernatur vero ab. Repellendus
+                                optio incidunt assumenda</span></p>
+                    </div>
+                    <div class="col">
+                        <h2 class="firstLine" id="h2Left"><span class="secondLine">Wavefont Generator</span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h2 class="firstLine"><span class="secondLine">Type the <a
+                                    href="https://en.wikipedia.org/wiki/Konami_Code" target="_blank">Konami
+                                    Code!</a></span></h2>
+                    </div>
+                    <div class="col">
+                        <p class="explain">Requires a keyboard with arrow keys to
+                            work.
+                            <br>Make sure the website window is selected and enter the following with your
+                            keyboard:
+                            <br>&uarr; &uarr; &darr; &darr; &larr; &uarr; &larr; &uarr; B A
                         </p>
                     </div>
-                    <div class="col"><a href="https://pr1735h.github.io/Justitbootcamp/" target="_blank"><img
-                                id="projectImg" class="projectImage" src="images/day1Website.jpg"
-                                alt="Day 1 Website"></a></div>
                 </div>
-                <!-- CHANGE IFRAMES TO PROJECT CARDS! -->
             </div>
         </section>
     </main>

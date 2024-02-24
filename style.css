@@ -4,20 +4,17 @@
     --backDrop1: rgba(255, 255, 255, 0);
     --backDrop2: rgba(70, 179, 252, 0.068);
     --blue1: rgba(70, 179, 252, 0.322);
-    --blue2: rgba(0, 217, 255, 0.425);
-    --text-shadow: 2px 2px 4px var(--blueShadow);
-    --text-shadow2: 2px 2px 4px var(--blueShadow), 3px 3px 4px var(--skyBlue);
+    --blue2: rgba(36, 170, 194, 0.664);
     --underLine: underline 4px solid;
     --firstLine: var(--underLine) var(--skyBlue);
     --secondLine: var(--underLine) var(--blue2);
 }
 
 body {
-    background: var(--skyBlue);
-    background: radial-gradient(circle, var(--skyBlue) 0%, rgb(41, 40, 40) 100%);
+    background: radial-gradient(circle, var(--skyBlue) 0%, rgb(65, 63, 63) 100%);
     font-family: "anta", system-ui;
     background-repeat: round;
-    text-shadow: var(--text-shadow2);
+    color: black;
 }
 
 .wavefont-test {
@@ -25,12 +22,53 @@ body {
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
-    font-variation-settings:
-        "ROND" 100,
-        "YELA" 0;
+    font-variation-settings: "ROND" 100, "YELA" 0;
 }
 
-/* Media query for screens in landscape mode */
+.firstLine,
+.secondLine {
+    text-decoration: var(--firstLine);
+    position: relative;
+    text-decoration-skip-ink: auto;
+}
+
+.secondLine {
+    text-decoration: var(--secondLine);
+    top: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--blueShadow);
+}
+
+a:hover {
+    color: var(--skyBlue);
+    text-decoration: var(--firstLine);
+}
+
+a:visited {
+    color: var(--blue2);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.explain2,
+#h2Left,
+.h3Right {
+    text-align: end;
+}
+
+#h2Left,
+.h3Right {
+    text-align: start;
+}
+
 @media screen and (orientation: landscape) {
     h1 {
         font-size: 6vw;
@@ -38,37 +76,13 @@ body {
 
     h2 {
         text-align: end;
-        font-size: 3.2vw;
-    }
-
-    #h2Left {
-        text-align: start;
+        font-size: 3.1vw;
+        padding: 2vw;
+        margin: 2vw;
     }
 
     h3 {
         font-size: 2.5vw;
-    }
-
-    .h3Right {
-        text-align: end;
-    }
-
-    .hLink {
-        text-decoration: none;
-    }
-
-    .firstLine {
-        text-decoration: var(--firstLine);
-        position: relative;
-        text-decoration-skip-ink: auto;
-    }
-
-    .secondLine {
-        text-decoration: var(--secondLine);
-        text-decoration-skip-ink: auto;
-        position: relative;
-        top: 4px;
-        text-shadow: var(--text-shadow);
     }
 
     .projectImage {
@@ -97,38 +111,17 @@ body {
         font-optical-sizing: auto;
         font-weight: 700;
         font-style: normal;
-        text-shadow: var(--textshadow);
-        text-decoration: var(--secondLine);
         text-decoration-skip-ink: auto;
-    }
-
-    p:hover {
-        text-shadow: var(--text-shadow2);
-        background: var(--backDrop2);
-        font-size: 1.5vw;
-        transition: all 0.3s ease-in-out;
     }
 
     #randWavy {
         text-align: end;
         font-size: 1.5vw;
-    }
-
-    .explain2 {
-        text-align: end;
-    }
-
-    .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
+        text-decoration: none;
     }
 }
 
-/* Media query for screens in portrait mode */
 @media screen and (orientation: portrait) {
-
     h1 {
         font-size: 6vh;
     }
@@ -138,34 +131,8 @@ body {
         font-size: 4vh;
     }
 
-    #h2Left {
-        text-align: start;
-    }
-
     h3 {
         font-size: 2.5vh;
-    }
-
-    .h3Right {
-        text-align: end;
-    }
-
-    .hLink {
-        text-decoration: none;
-    }
-
-    .firstLine {
-        text-decoration: var(--firstLine);
-        position: relative;
-        text-decoration-skip-ink: auto;
-    }
-
-    .secondLine {
-        text-decoration: var(--secondLine);
-        text-decoration-skip-ink: auto;
-        position: relative;
-        top: 4px;
-        text-shadow: var(--text-shadow);
     }
 
     .projectImage {
@@ -182,6 +149,7 @@ body {
         border: 5px solid var(--blueShadow);
         border-radius: 20px;
         margin: 1vh;
+        transition: all 0.8s ease-in-out;
     }
 
     p {
@@ -193,24 +161,12 @@ body {
         font-optical-sizing: auto;
         font-weight: 550;
         font-style: normal;
-        text-shadow: var(--text-shadow);
-        text-decoration: var(--secondLine);
         text-decoration-skip-ink: auto;
-    }
-
-    p:hover {
-        text-shadow: var(--text-shadow2);
-        background: var(--backDrop2);
-        font-size: 1.5vh;
     }
 
     #randWavy {
         text-align: end;
         font-size: 1.5vh;
+        text-decoration: none;
     }
-
-    .explain2 {
-        text-align: end;
-    }
-
 }

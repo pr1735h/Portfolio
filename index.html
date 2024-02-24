@@ -43,13 +43,13 @@
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="projects.html">Projects</a>
+                            <a class="nav-link" href="playGround.html">Code Playground</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://github.com/pr1735h" target="_blank">GitHub</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#secSection">About Me</a>
+                            <a class="nav-link" href="#secSection">Projects</a>
                         </li>
                     </ul>
                 </div>
@@ -65,60 +65,12 @@
     </div>
     <main>
         <!-- Main content -->
-        <section>
-            <div class="container-xxl">
-                <div class="row row-cols-2">
-                    <div class="col-6">
-                        <h2 class="firstLine"><span class="secondLine">Welcome to my portfolio website!</span></h2>
-                    </div>
-                    <div class="col-6">
-                        <p>I use this space to show off my
-                            skills and explain
-                            my thought process. I found that weird wavy font <a
-                                href="https://fonts.google.com/specimen/Wavefont" target="_blank" class="hLink"
-                                id="explain">(Wavefont)</a> on google fonts. It looks
-                            like an equalizer to me so I wrote some JavaScript functions. The first one declares a
-                            variable with a list of all digits, upper and lowercase letters, then it looks at the
-                            length of the original text and randomly reassigns each character with a character from
-                            the list. Another function changes the values of the "YELA" attribute of the font. Both
-                            functions use math.random and are called every 0.5 seconds</p>
-                    </div>
-                </div>
-                <div class="row row-cols-2" id="waves">
 
-                    <div class="col">
-                        <p class="firstLine" id="randWavy"><span class="secondLine wavefont-test">Lorem ipsum, dolor
-                                sit
-                                amet consectetur adipisicing elit. Ipsa quisquam natus esse accusamus pariatur, debitis
-                                adipisci a officiis, nulla perspiciatis reprehenderit aspernatur vero ab. Repellendus
-                                optio incidunt assumenda odit nostrum.Lorem ipsum, dolor sit
-                                amet consectetur adipisicing elit. Ipsa quisquam natus esse accusamus pariatur, debitis
-                                adipisci a officiis, nulla perspiciatis reprehenderit aspernatur vero ab. Repellendus
-                                optio incidunt assumenda</span></p>
-                    </div>
-                    <div class="col">
-                        <h2 class="firstLine" id="h2Left"><span class="secondLine">Wavefont Generator</span>
-                        </h2>
-                    </div>
-                </div>
-
-            </div>
-        </section>
         <section id="secSection">
             <div class="container-xxl">
                 <div class="row">
                     <div class="col">
-                        <h2 class="firstLine"><span class="secondLine">Type the <a
-                                    href="https://en.wikipedia.org/wiki/Konami_Code" target="_blank"
-                                    class="hLink">Konami Code!</a></span></h2>
-                    </div>
-                    <div class="col">
-                        <p class="  explain">Requires a keyboard with arrow keys to work</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <h2 class="firstLine text-center"><span class="secondLine">About Me</span></h2>
+                        <h2 class="firstLine text-center" id="aboutME"><span class="secondLine">About Me</span></h2>
                     </div>
                 </div>
                 <div class="row">
@@ -136,27 +88,86 @@
                             Apart from coding, I enjoy reading manga/manhua, playing Overwatch 2, and
                             traveling.</p>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <h3 class="firstLine h3Right"><a
-                                    href="https://1drv.ms/b/s!Ah_SxGgZQZHkgcU6590utFDNjP_RTA?e=r00Rjg" target="_blank"
-                                    class="hLink"><span class="secondLine">Click here to see my
-                                        CV</span></a></h3>
-                        </div>
-                        <div class="col">
-                            <h3 class="firstLine" id="h2Left"><a
-                                    href="https://1drv.ms/b/s!Ah_SxGgZQZHkgcU6590utFDNjP_RTA?e=r00Rjg" target="_blank"
-                                    class="hLink"><span class="secondLine">Click here to see my
-                                        LinkedIn page</span></a></h3>
-                        </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="firstLine text-center"><span class="secondLine">Projects:</span></h2>
                     </div>
                 </div>
+                <div class="row row-cols-2">
+                    <div class="col-4">
+                        <p class="explain2">Project 3:
+                            <br>Is an application that provides a user friendly way to perform CRUD functions.
+                            I created the various functions and saved them in different files such as (connect.py).
+                            connect.py defines how to connect to the database.
+                            I used Python and MySQL to make this database and application.
+                        </p>
+                    </div>
+                    <div class="col"><a href="https://replit.com/@pr1735h/JustIT-PyProject?v=1#main.py"
+                            target="_blank"><img id="projectImg" class="projectImage" src="images\replitProject.jpg"
+                                alt="Replit Project"></a></div>
+                </div>
+                <div class="row row-cols-2">
+                    <div class="col-4">
+                        <p class="explain2">Project 2:
+                            <br>Choose between Easy or Hard mode, type a number between 1-100 to try and guess the
+                            randomly generated number within the set amount of guesses!
+                            I used HTML, CSS and Javascript in this project.
+                        </p>
+                    </div>
+                    <div class="col"><a href="https://pr1735h.github.io/Justitbootcamp/Project2/" target="_blank"><img
+                                id="projectImg" class="projectImage" src="images/numberGuess.jpg"
+                                alt="Number Guess"></a></div>
+                </div>
+                <div class="row row-cols-2">
+                    <div class="col-4">
+                        <p class="explain2">Project 1:
+                            <br>Like Where's Wally, but you have to find Bigfoot!
+                            Bigfoot is placed on a random part of the window.
+                            If you need help finding him, click on the Hint button.
+                            But that resets the score to 0!
+                            In this project I used HTML, CSS and Javascript.
+                        </p>
+                    </div>
+                    <div class="col"><a href="https://pr1735h.github.io/Justitbootcamp/Project1/" target="_blank"><img
+                                id="projectImg" class="projectImage" src="images/bigFoot.jpg" alt="Big foot game"></a>
+                    </div>
+                </div>
+                <div class="row row-cols-2">
+                    <div class="col-4">
+                        <p class="explain2">Website 1:
+                            <br>This is the first website I created during the JustIT Bootcamp.
+                            <br>I used HTML, CSS and JavaScript to make this.
+                        </p>
+                    </div>
+                    <div class="col"><a href="https://pr1735h.github.io/Justitbootcamp/" target="_blank"><img
+                                id="projectImg" class="projectImage" src="images/day1Website.jpg"
+                                alt="Day 1 Website"></a></div>
+                </div>
+                <!-- CHANGE IFRAMES TO PROJECT CARDS! -->
             </div>
         </section>
     </main>
     <footer>
         <!-- Footer -->
         <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3 class="firstLine h3Right"><a href="https://1drv.ms/b/s!Ah_SxGgZQZHkgcU6590utFDNjP_RTA?e=r00Rjg"
+                            target="_blank" class="hLink"><span class="secondLine">Click here to see my
+                                CV</span></a></h3>
+                </div>
+                <div class="col">
+                    <h3 class="firstLine" id="h2Left"><a
+                            href="https://1drv.ms/b/s!Ah_SxGgZQZHkgcU6590utFDNjP_RTA?e=r00Rjg" target="_blank"
+                            class="hLink"><span class="secondLine">Click here to see my
+                                LinkedIn page</span></a></h3>
+                </div>
+            </div>
             <!-- Footer content -->
         </div>
     </footer>
