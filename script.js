@@ -71,3 +71,45 @@ function updateParagraph() {
 
 // Set a timer that runs the function every 500 milliseconds
 setInterval(updateParagraph, 500);
+
+
+// Hover tiles:
+const numRows = 10;
+const numCols = 10;
+const gridContainer = document.getElementById("grid-container");
+
+for (let row = 0; row < numRows; row++) {
+    for (let col = 0; col < numCols; col++) {
+        const tile = document.createElement("div");
+        tile.classList.add("col-sm-1", "square-tile", "tile"); // Add 'tile' class
+        gridContainer.appendChild(tile);
+
+        // Add event listener for mouseenter
+        tile.addEventListener("mouseenter", () => {
+            // Get surrounding tiles
+            const surroundingTiles = getSurroundingTiles(tile);
+            surroundingTiles.forEach(surroundingTile => {
+                surroundingTile.classList.add("surrounding-tile");
+            });
+        });
+
+        // Add event listener for mouseleave
+        tile.addEventListener("mouseleave", () => {
+            // Remove surrounding-tile class from all tiles
+            const allTiles = document.querySelectorAll(".tile");
+            allTiles.forEach(t => t.classList.remove("surrounding-tile"));
+        });
+    }
+}
+
+// Function to get surrounding tiles
+function getSurroundingTiles(tile) {
+    // Implement logic to find surrounding tiles (top, bottom, left, right)
+    // For simplicity, let's assume a 10x10 grid with no edge cases
+    const index = Array.from(gridContainer.children).indexOf(tile);
+    const topTile = gridContainer.children[index - numCols];
+    const bottomTile = gridContainer.children[index + numCols];
+    const leftTile = gridContainer.children[index - 1];
+    const rightTile = gridContainer.children[index + 1];
+    return [topTile, bottomTile, leftTile, rightTile].filter(Boolean);
+}

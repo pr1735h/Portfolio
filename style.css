@@ -86,20 +86,11 @@ a:visited {
     }
 
     .projectImage {
-        width: 40vw;
-        height: 40vh;
-        border: 5px solid var(--blue2);
-        border-radius: 20px;
-        margin: 1vh;
-    }
-
-    .projectImage:hover {
-        width: 50vw;
-        height: 50vh;
-        border: 5px solid var(--blue1);
-        border-radius: 20px;
-        margin: 1vh;
-        transition: all 0.8s ease-in-out;
+        width: 20vw;
+        height: 20vw;
+        margin: 1vw 1vw 1vw 1vw;
+        border: 7px solid var(--blue1);
+        border-radius: 5% 25% 15% 25%;
     }
 
     p {
@@ -119,6 +110,30 @@ a:visited {
         font-size: 1.5vw;
         text-decoration: none;
     }
+
+    .iconFooter {
+        margin-top: 2vw;
+        position: relative;
+        left: 11vw;
+    }
+
+    .footerText {
+        font-size: smaller;
+    }
+
+    .square-tile {
+        width: 1vw;
+        height: 1vh;
+        background-color: #f0f0f0;
+        padding: 1%;
+        margin: 1px;
+        border: 1px solid black;
+        transition: background-color 0.3s;
+    }
+
+    .surrounding-tile {
+        background-color: black;
+    }
 }
 
 @media screen and (orientation: portrait) {
@@ -136,20 +151,11 @@ a:visited {
     }
 
     .projectImage {
-        width: 50vw;
-        height: 25vh;
-        border: 5px solid var(--blue2);
-        border-radius: 20px;
-        margin: 1vh;
-    }
-
-    .projectImage:hover {
-        width: 60vw;
-        height: 35vh;
-        border: 5px solid var(--blueShadow);
-        border-radius: 20px;
-        margin: 1vh;
-        transition: all 0.8s ease-in-out;
+        width: 15vh;
+        height: 15vh;
+        margin: 1vw 1vw 1vw 1vw;
+        border: 7px solid var(--blue1);
+        border-radius: 5% 25% 15% 25%;
     }
 
     p {
@@ -168,5 +174,29 @@ a:visited {
         text-align: end;
         font-size: 1.5vh;
         text-decoration: none;
+    }
+
+    .iconFooter {
+        margin-top: 2vw;
+        position: relative;
+        left: 11vw;
+    }
+
+    .footerText {
+        font-size: smaller;
+    }
+
+    .square-tile {
+        width: 1vw;
+        height: 1vh;
+        background-color: #f0f0f0;
+        padding: 1%;
+        margin: 1px;
+        border: 1px solid black;
+        transition: background-color 0.3s;
+    }
+
+    .surrounding-tile {
+        background-color: black;
     }
 }
