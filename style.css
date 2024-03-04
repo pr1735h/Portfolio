@@ -1,17 +1,16 @@
 :root {
     --skyBlue: rgb(69, 179, 252);
-    --blueShadow: rgba(85, 229, 255, 0.664);
     --back1: rgba(41, 39, 39, 0.76);
     --backDrop2: rgba(70, 179, 252, 0.068);
-    --blue1: rgba(70, 179, 252, 0.322);
-    --blue2: rgba(36, 170, 194, 0.664);
+    --blue1: rgba(36, 141, 216, 0.918);
+    --blue2: rgba(7, 40, 46, 0.808);
     --underLine: underline 4px solid;
-    --firstLine: var(--underLine) var(--skyBlue);
+    --firstLine: var(--underLine) var(--blue1);
     --secondLine: var(--underLine) var(--blue2);
 }
 
 body {
-    background: radial-gradient(circle, var(--skyBlue) 0%, rgb(65, 63, 63) 100%);
+    background: radial-gradient(circle, var(--skyBlue) 70%, rgb(121, 116, 116) 100%);
     font-family: "anta", system-ui;
     background-repeat: round;
     color: black;
@@ -34,12 +33,18 @@ body {
 
 .secondLine {
     text-decoration: var(--secondLine);
-    top: 4px;
+    top: -4px;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    background-color: var(--backDrop2);
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--blue2);
 }
 
 a:visited {
@@ -47,18 +52,7 @@ a:visited {
 }
 
 a:hover {
-    color: var(--skyBlue);
-    text-decoration: var(--firstLine);
-}
-
-
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    height: 5vh;
+    color: var(--blue1);
 }
 
 .explain2,
@@ -89,8 +83,8 @@ a:hover {
     }
 
     .projectImage {
-        width: 20vw;
-        height: 20vw;
+        width: 13vw;
+        height: 13vw;
         margin: 1vw 1vw 1vw 1vw;
         border: 7px solid var(--blue1);
         border-radius: 5% 25% 15% 25%;
@@ -122,20 +116,6 @@ a:hover {
 
     .footerText {
         font-size: smaller;
-    }
-
-    .square-tile {
-        width: 1vw;
-        height: 1vh;
-        background-color: #f0f0f0;
-        padding: 1%;
-        margin: 1px;
-        border: 1px solid black;
-        transition: background-color 0.3s;
-    }
-
-    .surrounding-tile {
-        background-color: black;
     }
 }
 
@@ -187,19 +167,5 @@ a:hover {
 
     .footerText {
         font-size: smaller;
-    }
-
-    .square-tile {
-        width: 1vw;
-        height: 1vh;
-        background-color: #f0f0f0;
-        padding: 1%;
-        margin: 1px;
-        border: 1px solid black;
-        transition: background-color 0.3s;
-    }
-
-    .surrounding-tile {
-        background-color: black;
     }
 }
