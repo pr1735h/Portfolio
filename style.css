@@ -1,7 +1,7 @@
 :root {
-    --skyBlue: rgba(70, 178, 252);
+    --skyBlue: rgb(69, 179, 252);
     --blueShadow: rgba(85, 229, 255, 0.664);
-    --backDrop1: rgba(255, 255, 255, 0);
+    --back1: rgba(41, 39, 39, 0.76);
     --backDrop2: rgba(70, 179, 252, 0.068);
     --blue1: rgba(70, 179, 252, 0.322);
     --blue2: rgba(36, 170, 194, 0.664);
@@ -39,7 +39,11 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--blueShadow);
+    color: black;
+}
+
+a:visited {
+    color: var(--back1);
 }
 
 a:hover {
@@ -47,15 +51,14 @@ a:hover {
     text-decoration: var(--firstLine);
 }
 
-a:visited {
-    color: var(--blue2);
-}
+
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 80%;
+    height: 5vh;
 }
 
 .explain2,
