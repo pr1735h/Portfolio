@@ -42,6 +42,10 @@ body {
     background-color: var(--backDrop2);
 }
 
+.backgroundChange {
+    background-color: var(--backDrop2);
+}
+
 a {
     text-decoration: none;
     color: var(--blue2);
