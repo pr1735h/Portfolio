@@ -65,6 +65,11 @@ a:hover {
     text-align: end;
 }
 
+.explain2 {
+    position: relative;
+    top: 30%;
+}
+
 #h2Left,
 .h3Right {
     text-align: start;
